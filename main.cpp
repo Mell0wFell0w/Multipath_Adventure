@@ -16,6 +16,7 @@ int main() {
     int cookTime;
     int totalTime;
     string userName;
+    int i;
 
     do {
         GreetingPrompt(userName);
@@ -45,10 +46,24 @@ int main() {
                         RandomDrink();
                         cout << "THE END" << endl;
                     } else {
-                        cout << "Please enter a valid input." << endl;
+                        for (i = 0; i < 10; ++i) {
+                            cout << "Please enter a valid input" << endl;
+                            cin >> userResponse;
+
+                            if (userResponse == 'y' || userResponse == 'n') {
+                                break;
+                            }
+                        }
                     }
                 } else {
-                    cout << "Please enter a valid input." << endl;
+                    for (i = 0; i < 10; ++i) {
+                        cout << "Please enter a valid input" << endl;
+                        cin >> userResponse;
+
+                        if (userResponse == 'y' || userResponse == 'n') {
+                            break;
+                        }
+                    }
                 }
 
             } else if (userResponse == 'n') {
@@ -75,7 +90,14 @@ int main() {
                             RandomDrink();
                             cout << "THE END" << endl;
                         } else {
-                            cout << "Please enter a valid input." << endl;
+                            for (i = 0; i < 10; ++i) {
+                                cout << "Please enter a valid input" << endl;
+                                cin >> userResponse;
+
+                                if (userResponse == 'y' || userResponse == 'n') {
+                                    break;
+                                }
+                            }
                         }
                     }
 
@@ -84,17 +106,38 @@ int main() {
                     RandomDrink();
                     cout << "THE END" << endl;
                 } else {
-                    cout << "Please enter a valid input." << endl;
+                    for (i = 0; i < 10; ++i) {
+                        cout << "Please enter a valid input" << endl;
+                        cin >> userResponse;
+
+                        if (userResponse == 'y' || userResponse == 'n') {
+                            break;
+                        }
+                    }
                 }
             } else {
-                cout << "Please enter a valid input." << endl;
+                for (i = 0; i < 10; ++i) {
+                    cout << "Please enter a valid input" << endl;
+                    cin >> userResponse;
+
+                    if (userResponse == 'y' || userResponse == 'n') {
+                        break;
+                    }
+                }
             }
         } else if (userResponse == 'n') {
             cout << "You should order take-out." << endl;
             RandomDrink();
             cout << "THE END" << endl;
         } else {
-            cout << "Please enter a valid input." << endl;
+            for (i = 0; i < 10; ++i) {
+                cout << "Please enter a valid input" << endl;
+                cin >> userResponse;
+
+                if (userResponse == 'y' || userResponse == 'n') {
+                    break;
+                }
+            }
         }
     } while (PlayAgain());
 
@@ -115,12 +158,12 @@ void GreetingPrompt(string userName) {
         cout << "<";
     }
     cout << endl;
-    
+
     cout << "Every night you have to make the decision of what to eat for dinner. " << endl <<
-    "As a college student you sometimes don't have time to even think about " << endl <<
-    "what to eat. This program is designed to help you figure out what to " << endl <<
-    "eat for dinner!" << endl << "It will also help you by providing a random drink generator. " << endl <<
-    "First question, do you want to cook? Enter y/n" << endl;
+         "As a college student you sometimes don't have time to even think about " << endl <<
+         "what to eat. This program is designed to help you figure out what to " << endl <<
+         "eat for dinner!" << endl << "It will also help you by providing a random drink generator. " << endl <<
+         "First question, do you want to cook? Enter y/n" << endl;
 
 }
 int TotalTime(int prepTime, int cookTime) {
@@ -150,12 +193,12 @@ void RandomDrink(){
         cout << "Your drink is water." << endl;
     }
     else if (drinkChoice == 1){
-            cout << "Your drink is milk." << endl;
-        }
+        cout << "Your drink is milk." << endl;
+    }
     else if (drinkChoice == 2){
         cout << "Your drink is juice." << endl;
     }
-    }
+}
 bool PlayAgain(){
     char playAgainResponse;
     cout << "Would you like to play again? Enter y/n" << endl;
