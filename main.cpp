@@ -16,7 +16,6 @@ int main() {
     int cookTime;
     int totalTime;
     string userName;
-    int i;
 
     do {
         GreetingPrompt(userName);
@@ -46,7 +45,7 @@ int main() {
                         RandomDrink();
                         cout << "THE END" << endl;
                     } else {
-                        for (i = 0; i < 10; ++i) {
+                        for (int i = 0; i < 10; ++i) {
                             cout << "Please enter a valid input" << endl;
                             cin >> userResponse;
 
@@ -56,7 +55,7 @@ int main() {
                         }
                     }
                 } else {
-                    for (i = 0; i < 10; ++i) {
+                    for (int i = 0; i < 10; ++i) {
                         cout << "Please enter a valid input" << endl;
                         cin >> userResponse;
 
@@ -90,7 +89,7 @@ int main() {
                             RandomDrink();
                             cout << "THE END" << endl;
                         } else {
-                            for (i = 0; i < 10; ++i) {
+                            for (int i = 0; i < 10; ++i) {
                                 cout << "Please enter a valid input" << endl;
                                 cin >> userResponse;
 
@@ -106,7 +105,7 @@ int main() {
                     RandomDrink();
                     cout << "THE END" << endl;
                 } else {
-                    for (i = 0; i < 10; ++i) {
+                    for (int i = 0; i < 10; ++i) {
                         cout << "Please enter a valid input" << endl;
                         cin >> userResponse;
 
@@ -116,7 +115,7 @@ int main() {
                     }
                 }
             } else {
-                for (i = 0; i < 10; ++i) {
+                for (int i = 0; i < 10; ++i) {
                     cout << "Please enter a valid input" << endl;
                     cin >> userResponse;
 
@@ -130,7 +129,7 @@ int main() {
             RandomDrink();
             cout << "THE END" << endl;
         } else {
-            for (i = 0; i < 10; ++i) {
+            for (int i = 0; i < 10; ++i) {
                 cout << "Please enter a valid input" << endl;
                 cin >> userResponse;
 
@@ -146,15 +145,14 @@ int main() {
 
 void GreetingPrompt(string userName) {
     userName = GetUserName();
-    int i;
     cout << "     ";
-    for (i = 0; i < userName.size(); ++i){
+    for (size_t i = 0; i < userName.size(); ++i){
         cout << ">";
     }
     cout << endl;
     cout << "Hey, " << userName << "!" << endl;
     cout << "     ";
-    for (i = 0; i < userName.size(); ++i){
+    for (size_t i = 0; i < userName.size(); ++i){
         cout << "<";
     }
     cout << endl;
